@@ -1,6 +1,7 @@
 package com.lethanh98.learn.javamemorylayout;
 
 
+import sun.misc.Contended;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
@@ -33,7 +34,6 @@ public class FieldsDataTypeOrderInObject {
     private volatile long h;
     private volatile String refA;
     private volatile String refB;
-
     public static void main(String[] args) throws NoSuchFieldException, SecurityException {
         System.out.println("e:int    \t" + UNSAFE.objectFieldOffset(FieldsDataTypeOrderInObject.class.getDeclaredField("e")));
         System.out.println("g:double \t" + UNSAFE.objectFieldOffset(FieldsDataTypeOrderInObject.class.getDeclaredField("g")));
